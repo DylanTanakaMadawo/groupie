@@ -15,6 +15,7 @@ import { useStateValue } from "../../StateProvider";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "firebase/compat/auth";
+import { Appdrawer } from "../Appdrawer";
 
 export const Chat = () => {
   const [input, setInput] = useState("");
@@ -51,22 +52,12 @@ export const Chat = () => {
   return (
     <div className="chat">
       <div className="chat-header">
-        <Avatar />
-        <div className="chat-headerInfo">
+        <Appdrawer />
+        <h3>{roomName}</h3>
+        <Avatar src={user?.photoURL} />
+        {/* <div className="chat-headerInfo">
           <h3>{roomName}</h3>
-          <p>Last seen ...</p>
-        </div>
-        <div className="chat-headerRight">
-          <IconButton>
-            <SearchOutlined sx={{ color: "#d1d1d1" }} />
-          </IconButton>
-          <IconButton>
-            <AttachFile sx={{ color: "#d1d1d1" }} />
-          </IconButton>
-          <IconButton>
-            <MoreVert sx={{ color: "#d1d1d1" }} />
-          </IconButton>
-        </div>
+        </div> */}
       </div>
       <div className="chat-body">
         {messages.map((message) => (

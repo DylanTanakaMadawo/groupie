@@ -61,3 +61,9 @@
   background-color: rgb(0, 0, 0);
   overflow: scroll;
 }
+
+@media (max-width: 992px) {
+  .sidebar {
+    display: none;
+  }
+}

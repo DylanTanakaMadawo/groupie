@@ -110,3 +110,23 @@
   padding: 10px;
   color: #d1d1d1;
 }
+
+/* .toggle-btn {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 30px;
+  display: none;
+} */
+
+@media (max-width: 996px) {
+  .chat {
+    flex: 1;
+  }
+  .chat-header {
+    /* margin-right: 20px; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
