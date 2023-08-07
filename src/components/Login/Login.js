@@ -21,13 +21,13 @@ export const Login = () => {
       .catch((error) => alert(error.message));
   };
 
-  const navigate = useNavigate();
-  useEffect(() => {
-    let isAuth = JSON.parse(localStorage.getItem("user"));
-    if (isAuth && isAuth !== null) {
-      navigate("/");
-    }
-  }, []);
+  // const navigate = useNavigate();
+  // useEffect(() => {
+  //   let isAuth = JSON.parse(localStorage.getItem("user"));
+  //   if (isAuth && isAuth !== null) {
+  //     navigate("/");
+  //   }
+  // }, []);
   return (
     <div className="login">
       <div className="login-container">
