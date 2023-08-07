@@ -5,6 +5,8 @@ import { auth, provider } from "../../FirebaseConfig";
 import { useStateValue } from "../../StateProvider";
 import { actionType } from "../../reducer";
 
+import { useNavigate } from "react-router-dom";
+
 export const Login = () => {
   const [{}, dispatch] = useStateValue();
   const signIn = () => {
@@ -18,6 +20,14 @@ export const Login = () => {
       })
       .catch((error) => alert(error.message));
   };
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    let isAuth = JSON.parse(localStorage.getItem("user"));
+    if (isAuth && isAuth !== null) {
+      navigate("/");
+    }
+  }, []);
   return (
     <div className="login">
       <div className="login-container">
