@@ -23,7 +23,7 @@ export const Login = () => {
       <div className="login-container">
         <img src="" alt="" />
         <div className="login-text">
-          <h1>Sign In to VibeUs</h1>
+          <h1>Sign In to Dandaro</h1>
         </div>
         <Button onClick={signIn}>Sign In With Google</Button>
       </div>

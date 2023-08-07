@@ -27,6 +27,7 @@ export const App = () => {
           </BrowserRouter>
         </div>
       )}
+      <p style={{ padding: "10px" }}>Site Developed By Dylan Madawo | 2023</p>
     </div>
   );
 };
