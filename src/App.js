@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import { Sidebar } from "./components/Sidebar";
 import { Chat } from "./components/Chat/Chat";
@@ -9,7 +9,7 @@ import { useStateValue } from "./StateProvider";
 // import { Homepage } from "./components/Homepage";
 
 export const App = () => {
-  const [{ user }, dispatch] = useStateValue();
+  const [{ user }] = useStateValue();
 
   return (
     <div className="app">

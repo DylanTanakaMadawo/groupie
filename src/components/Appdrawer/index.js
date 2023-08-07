@@ -5,21 +5,25 @@ import MenuIcon from "@mui/icons-material/Menu";
 import "./index.css";
 
 import { SidebarChat } from "../SidebarChat/SidebarChat";
-import { useStateValue } from "../../StateProvider";
+// import { useStateValue } from "../../StateProvider";
 
-import { Divider } from "@mui/material";
+import { Divider, IconButton } from "@mui/material";
 
 export const Appdrawer = () => {
-  const toggleBtn = document.querySelector(".toggle-btn");
-  const toggleBtnIcon = document.querySelector(".toggle-btn i");
+  // const toggleBtn = document.querySelector(".toggle-btn");
+  // const toggleBtnIcon = document.querySelector(".toggle-btn i");
   const dropDownMenu = document.querySelector(".dropdown-menu");
 
-  toggleBtn.onclick = () => {
+  // toggleBtn.onclick = () => {
+  //   dropDownMenu.classList.toggle("open");
+  // };
+
+  const toggleFunction = () => {
     dropDownMenu.classList.toggle("open");
   };
 
   const [rooms, setRooms] = useState([]);
-  const [{ user }, dispatch] = useStateValue();
+  // const [{ user }, dispatch] = useStateValue();
 
   useEffect(() => {
     const unsubscribe = db.collection("rooms").onSnapshot((snapshot) =>
@@ -39,7 +43,12 @@ export const Appdrawer = () => {
       <div>
         <div className="toggle-btn">
           <i>
-            <MenuIcon />
+            <IconButton
+              sx={{ color: "white", backgroundColor: "black" }}
+              onClick={toggleFunction}
+            >
+              <MenuIcon />
+            </IconButton>
           </i>
         </div>
         <div className="dropdown-menu">

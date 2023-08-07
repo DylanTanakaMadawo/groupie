@@ -10,7 +10,6 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { SearchOutlined } from "@mui/icons-material";
 import { SidebarChat } from "./SidebarChat/SidebarChat";
 import { useStateValue } from "../StateProvider";
-import { Appdrawer } from "./Appdrawer";
 
 export const Sidebar = () => {
   const [rooms, setRooms] = useState([]);
